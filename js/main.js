@@ -37,7 +37,9 @@ function initImageParallax(){
       ease: 'none',
       scrollTrigger: {
         trigger: section,
-        start: 'top bottom',
+        start: 'top center',
+        end: 'center center',
+        markers: true,
         scrub: true
       }
     })

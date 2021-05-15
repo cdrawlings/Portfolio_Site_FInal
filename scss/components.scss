@@ -89,7 +89,8 @@ top: 10vh;
   img {
     position: absolute;
     object-fit: cover;
-
+    opacity: 0;
+    top: -20vh;
   }
 }
 .a__name-text{
