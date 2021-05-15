@@ -20,8 +20,34 @@ function horizontalScroll(){
   });
 }
 
+
+function initImageParallax(){
+  // select all sections with parallax
+  gsap.utils.toArray('.with-parallax').forEach(section => {
+
+    // get the image
+    const image = section.querySelector('img');
+
+    console.log(image)
+
+    //creat tween
+    gsap.to(image, {
+      yPercent: 20,
+      opacity: 1,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: section,
+        start: 'top bottom',
+        scrub: true
+      }
+    })
+  })
+
+}
+
 function init(){
 
+  initImageParallax();
   horizontalScroll();
 
 }
