@@ -38,9 +38,8 @@ function initImageParallax(){
       scrollTrigger: {
         trigger: section,
         start: 'top center',
-        end: 'center center',
-        markers: true,
-        scrub: true
+        end: 'center 70%',
+        scrub: true,
       }
     })
   })

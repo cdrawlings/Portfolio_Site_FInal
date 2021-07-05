@@ -10,25 +10,6 @@ header{
   position: relative;
   overflow: hidden;
 }
-.h__content {
-  display: flex;
-  flex-direction: column;
-  color:#47c0c2;
-  position: absolute;
-  top: 10vh;
-  left:5vw;
-
-  h1 {
-    font-size: 2.8rem;
-    margin: 0;
-    font-weight: 600;
-  }
-  h3{
-    font-size: 1rem;
-    font-weight: 400;
-    margin: .6rem 0 0;
-  }
-}
 .h__skill {
   margin-bottom: 0;
 }
@@ -60,9 +41,10 @@ header{
   position: absolute;
   grid-area: name;
   margin: 0;
-top: 10vh;
+  top: 10vh;
   left: 5vw;
   font-family: $font-stack;
+  z-index: 1;
 }
 .a__name-text{
 
@@ -81,14 +63,15 @@ top: 10vh;
 .a__image {
   grid-area: image;
   width: 100%;
-  height: 70vh;
-  top: 7vh;
-  position: relative;
-
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
 
   img {
     position: absolute;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: 50% 505;
     opacity: 0;
     top: -20vh;
   }
@@ -102,6 +85,7 @@ top: 10vh;
   justify-content: center;
   align-items: center;
   margin: 0;
+  z-index: 1;
 
   a{
     padding: .8rem 1.2rem;
@@ -125,11 +109,12 @@ top: 10vh;
   .a__image {
 
     img {
-      left: -25vw;
-      width: 180%;
+      top: 5vh;
       object-position: 50% 50%;
+      width: 130%;
     }
   }
+
   .a__button{
     grid-area: button;
 
@@ -150,17 +135,15 @@ top: 10vh;
   }
 
   .a__image {
-    top: 10vh;
 
     img {
+      top: -1vh;
       left: -40vw;
-      width: 170%;
+      width: 160%;
       object-position: 50% 50%;
     }
   }
   .a__button{
-
-
     a{
       border: 2px solid $color-tp;
       color: $color-tp;
@@ -178,17 +161,15 @@ top: 10vh;
   }
 
   .a__image {
-    top: 5vh;
-    width: 100%;
 
     img {
-      left: -15vw;
-      width: 180%;
+      top: -2vh;
+      left: -10vw;
+      width: 160%;
       object-position: 50% 50%;
     }
   }
   .a__button{
-
 
     a{
       background-color: $color-gmac;
@@ -207,7 +188,7 @@ top: 10vh;
   }
 
   .a__image {
-    top: 10vh;
+    top: 5vh;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -215,14 +196,13 @@ top: 10vh;
    justify-content: center;
 
     img {
-  top: 1rem;
-      width: 80%;
+      top: 0;
+      width: 75%;
       object-position: 50% 50%;
       box-shadow: 2px 2px 7px 3px #777;
     }
   }
   .a__button{
-
 
     a{
       border: 2px solid $color-aspen;
@@ -232,7 +212,6 @@ top: 10vh;
   }
 }
 
-
 #iss {
   background-color: $color-iss;
 
@@ -241,11 +220,11 @@ top: 10vh;
   }
 
   .a__image {
-    top: 25vh;
     width: 100%;
     margin: 0 auto;
 
     img {
+      top: 15%;
       left: -20vw;
       width: 160%;
       object-position: 50% 50%;
@@ -478,13 +457,14 @@ top: 10vh;
 
 /*  END OF SMART PHONE  */
 
-@media screen and (min-width : 700px) {
+@media screen and (min-width : 485px) {
 
 
   #monica {
     .a__image {
 
       img {
+        top: -3vh;
         left: 0;
         width: 130%;
 
